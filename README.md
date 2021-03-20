@@ -1,0 +1,2 @@
+# libasm
+Le langage assembleur, souvent appellé asm, est un langage de bas niveau pour ordinateur - ou autre machine programmable - qui possède une très forte correspondance entre le langage et l’architecture de la machine. Chaque asm est spécifique à un ordinateur particulier. A l’opposé, les langages hautniveau sont généralement portables sur de multiples plateformes mais nécessitent compilation ou interprétation. Le langage assembleur peut également être appellé langage machine symbolique.
