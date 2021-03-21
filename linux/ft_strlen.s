@@ -1,5 +1,5 @@
-segment .text						; code
-	global _ft_strlen
+segment		.text						; code
+global		_ft_strlen
 
 ;ft_strlen(char *s)
 _ft_strlen:
