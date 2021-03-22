@@ -1,9 +1,9 @@
 segment		.text
-global		_ft_strcpy
-extern		_ft_strlen
+global		ft_strcpy
+extern		ft_strlen
 
 ;ft_strcpy(dst, src)
-_ft_strcpy:
+ft_strcpy:
 	push 	rdi				; top of the stack
 	mov 	rdi, rsi
 	call 	_ft_strlen 		; result in rax

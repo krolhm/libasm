@@ -1,7 +1,7 @@
 NAME = libasm.a
 
 ifeq ($(shell uname), Linux)
-ASMFLAGS			=	-felf64 -g -Fdwarf
+ASMFLAGS			=	-felf64
 FOLD				=	linux
 else
 ASMFLAGS			=	-fmacho64
@@ -30,12 +30,13 @@ clean:
 	rm -f $(OBJS)
 
 test: all
-	gcc -Wall -Wextra -Werror -I./libasm.h libasm.a tests.c -o go
-	./go
+	gcc -Wall -Wextra -Werror libasm.a tests.c -o test
+	./test
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f go
 	rm -f test
+	rm -f ft_read.test.txt
+	rm -f ft_write.test.txt
 
 re: fclean all

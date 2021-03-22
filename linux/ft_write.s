@@ -2,11 +2,11 @@
 %define SYS_WRITE 1
 
 segment		.text
-global		_ft_write
+global		ft_write
 extern		___error
 
 ;ft_write (rdi, rsi, rdx)
-_ft_write:
+ft_write:
 	mov		r8, rdx				; save len in r8
 	mov		rax, SYS_WRITE
     syscall					; call rax

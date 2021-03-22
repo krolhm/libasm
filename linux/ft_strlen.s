@@ -1,8 +1,8 @@
 segment		.text						; code
-global		_ft_strlen
+global		ft_strlen
 
 ;ft_strlen(char *s)
-_ft_strlen:
+ft_strlen:
 	mov 	rax, 0					; init rax
 	jmp 	count
 

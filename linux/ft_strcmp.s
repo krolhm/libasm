@@ -1,7 +1,7 @@
 segment		.text
-global		_ft_strcmp
+global		ft_strcmp
 
-_ft_strcmp:
+ft_strcmp:
 	mov 	rax, 0
 	jmp		comp
 
