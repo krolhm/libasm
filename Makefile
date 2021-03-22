@@ -30,13 +30,15 @@ clean:
 	rm -f $(OBJS)
 
 test: all
-	gcc -Wall -Wextra -Werror libasm.a tests.c -o test
-	./test
+	cc tests.c -L. -lasm -I. -fsanitize=address -no-pie -fsanitize=leak -g
+	./a.out
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f test
+	rm -f a.out
 	rm -f ft_read.test.txt
 	rm -f ft_write.test.txt
 
 re: fclean all
+
+.PHONY:	all clean fclean re test

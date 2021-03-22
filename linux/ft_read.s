@@ -3,19 +3,20 @@
 
 segment		.text
 global		ft_read
-extern		___error
+extern		__errno_location
 
 ;ft_read	(rdi, rsi, rdx)
 ft_read:
 	mov 	rax, SYS_READ
 	syscall
-	jc		exit_error
+    cmp     rax, 0
+	jl		exit_error
 	ret
 
 exit_error:
-	push	rax
-    call	___error
-    pop		rdx
-    mov		[rax], rdx
+	neg     rax
+    mov     rdi, rax
+    call	__errno_location
+    mov		[rax], rdi
     mov		rax, -1
     ret
