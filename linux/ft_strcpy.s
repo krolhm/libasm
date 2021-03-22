@@ -6,7 +6,7 @@ extern		ft_strlen
 ft_strcpy:
 	push 	rdi				; top of the stack
 	mov 	rdi, rsi
-	call 	_ft_strlen 		; result in rax
+	call 	ft_strlen 		; result in rax
 	mov 	rcx, rax
 	pop 	rdi				; get rdi
 	cld						; clear flag DF (security) DF = 0 = increment for rep, DF = 1 = decrement for rep
